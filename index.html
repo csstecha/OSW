@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpShift Advisory — Operations &amp; AI Consulting</title>
+  <meta name="description" content="OpShift Advisory helps businesses streamline operations, adopt AI, and build systems that scale. Practical consulting for real-world results." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:  { 900: '#0F1F3D', 800: '#152848', 700: '#1c3560', 600: '#234070' },
+            teal:  { DEFAULT: '#00C2CB', dark: '#00a8b0', light: '#33ced6' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .gradient-hero { background: linear-gradient(135deg, #0F1F3D 0%, #152848 60%, #1c3560 100%); }
+    .text-teal { color: #00C2CB; }
+    .bg-teal { background-color: #00C2CB; }
+    .border-teal { border-color: #00C2CB; }
+    .hover\:bg-teal-dark:hover { background-color: #00a8b0; }
+    .ring-teal { --tw-ring-color: #00C2CB; }
+    .service-card:hover .service-icon { transform: scale(1.1); transition: transform 0.2s; }
+  </style>
+</head>
+<body class="font-sans text-gray-900 antialiased">
+
+  <!-- ── NAVIGATION ─────────────────────────────────────────────── -->
+  <nav id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" data-scrolled="false">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded bg-teal flex items-center justify-center text-white font-black text-sm leading-none select-none">O</div>
+        <span class="font-bold text-white text-sm tracking-tight">OpShift <span class="font-light opacity-70">Advisory</span></span>
+      </a>
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#services" class="text-sm text-white/70 hover:text-white transition-colors">Services</a>
+        <a href="#about"    class="text-sm text-white/70 hover:text-white transition-colors">About</a>
+        <a href="#contact"  class="text-sm text-white/70 hover:text-white transition-colors">Contact</a>
+        <a href="#contact"  class="text-sm font-semibold bg-teal text-navy-900 px-4 py-2 rounded-lg hover:bg-teal-dark transition-colors">Get in Touch</a>
+      </div>
+      <!-- Mobile menu button -->
+      <button id="menu-toggle" class="md:hidden text-white p-2" aria-label="Menu">
+        <svg id="icon-menu"  class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-navy-800 border-t border-white/10 px-6 py-4 space-y-3">
+      <a href="#services" class="block text-sm text-white/70 hover:text-white py-1" onclick="closeMobile()">Services</a>
+      <a href="#about"    class="block text-sm text-white/70 hover:text-white py-1" onclick="closeMobile()">About</a>
+      <a href="#contact"  class="block text-sm text-white/70 hover:text-white py-1" onclick="closeMobile()">Contact</a>
+      <a href="#contact"  class="block text-sm font-semibold bg-teal text-navy-900 px-4 py-2 rounded-lg text-center mt-2" onclick="closeMobile()">Get in Touch</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ───────────────────────────────────────────────────── -->
+  <section class="gradient-hero min-h-screen flex items-center relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-teal/5"></div>
+      <div class="absolute top-1/2 -left-64 w-[600px] h-[600px] rounded-full bg-teal/3"></div>
+      <div class="absolute bottom-0 right-0 w-full h-px bg-gradient-to-r from-transparent via-teal/30 to-transparent"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 py-32 relative">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal/10 border border-teal/20 mb-8">
+          <span class="w-1.5 h-1.5 rounded-full bg-teal animate-pulse"></span>
+          <span class="text-xs font-medium text-teal tracking-wide uppercase">Operations &amp; AI Consulting</span>
+        </div>
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] tracking-tight mb-6">
+          Smarter<br/>Operations.<br/><span class="text-teal">Better Outcomes.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-white/60 leading-relaxed max-w-xl mb-10">
+          We help businesses across industries streamline how they work, adopt AI with confidence, and build operating systems that actually scale.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-teal text-navy-900 font-semibold px-7 py-3.5 rounded-lg hover:bg-teal-dark transition-colors text-sm">
+            Start a Conversation
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+          <a href="#services" class="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-medium px-7 py-3.5 rounded-lg hover:bg-white/5 transition-colors text-sm">
+            See What We Do
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
+      <span class="text-xs text-white/50 uppercase tracking-widest">Scroll</span>
+      <div class="w-px h-8 bg-gradient-to-b from-white/40 to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- ── SOCIAL PROOF BAR ───────────────────────────────────────── -->
+  <section class="bg-white border-b border-gray-100 py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+        <div class="text-center">
+          <p class="text-2xl font-bold text-navy-900">Cross-Industry</p>
+          <p class="text-sm text-gray-500 mt-0.5">Expertise</p>
+        </div>
+        <div class="hidden md:block w-px h-10 bg-gray-200"></div>
+        <div class="text-center">
+          <p class="text-2xl font-bold text-navy-900">Practical</p>
+          <p class="text-sm text-gray-500 mt-0.5">Not Theoretical</p>
+        </div>
+        <div class="hidden md:block w-px h-10 bg-gray-200"></div>
+        <div class="text-center">
+          <p class="text-2xl font-bold text-navy-900">AI-First</p>
+          <p class="text-sm text-gray-500 mt-0.5">Approach</p>
+        </div>
+        <div class="hidden md:block w-px h-10 bg-gray-200"></div>
+        <div class="text-center">
+          <p class="text-2xl font-bold text-navy-900">Results</p>
+          <p class="text-sm text-gray-500 mt-0.5">Focused</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ───────────────────────────────────────────────── -->
+  <section id="services" class="py-24 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-xs font-semibold uppercase tracking-widest text-teal mb-3">What We Do</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-navy-900 mb-4">Services</h2>
+        <p class="text-lg text-gray-500 max-w-xl mx-auto">
+          We work where operations and technology meet — helping organizations run leaner, move faster, and do more with what they have.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
+        <!-- Service 1 -->
+        <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="service-icon w-12 h-12 rounded-xl bg-teal/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">AI Strategy &amp; Adoption</h3>
+          <p class="text-gray-500 leading-relaxed mb-4">
+            Cut through the AI hype and build a plan that fits your business. We assess your readiness, identify the highest-value use cases, select the right tools, and guide your team through implementation — from pilot to full rollout.
+          </p>
+          <ul class="space-y-1.5">
+            <li class="flex items-center gap-2 text-sm text-gray-500"><span class="w-1 h-1 rounded-full bg-teal flex-shrink-0"></span>AI readiness assessment</li>
+            <li class="flex items-center gap-2 text-sm text-gray-500"><span class="w-1 h-1 rounded-full bg-teal flex-shrink-0"></span>Use case identification &amp; prioritization</li>
+            <li class="flex items-center gap-2 text-sm text-gray-500"><span class="w-1 h-1 rounded-full bg-teal flex-shrink-0"></span>Vendor selection &amp; implementation roadmap</li>
+            <li class="flex items-center gap-2 text-sm text-gray-500"><span class="w-1 h-1 rounded-full bg-teal flex-shrink-0"></span>Pilot program design &amp; rollout</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="service-icon w-12 h-12 rounded-xl bg-teal/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Operations Assessment</h3>
+          <p class="text-gray-500 leading-relaxed mb-4">
+            A structured deep-dive into how your business actually runs. We map your workflows, surface inefficiencies, and deliver a prioritized action plan with clear ROI — so you know exactly where to focus first.
+          </p>
+          <ul class="space-y-1.5">
+            <li class="flex items-center gap-2 text-sm text-gray-500"><span class="w-1 h-1 rounded-full bg-teal flex-shrink-0"></span>Current-state workflow mapping</li>
+            <li class="flex items-center gap-2 text-sm text-gray-500"><span class="w-1 h-1 rounded-full bg-teal flex-shrink-0"></span>Bottleneck &amp; inefficiency identification</li>
+            <li class="flex items-center gap-2 text-sm text-gray-500"><span class="w-1 h-1 rounded-full bg-teal flex-shrink-0"></span>Prioritized improvement roadmap</li>
+            <li class="flex items-center gap-2 text-sm text-gray-500"><span class="w-1 h-1 rounded-full bg-teal flex-shrink-0"></span>ROI modeling for each initiative</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW WE WORK ─────────────────────────────────────────────── -->
+  <section class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-xs font-semibold uppercase tracking-widest text-teal mb-3">Our Approach</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-navy-900 mb-4">How We Work</h2>
+        <p class="text-lg text-gray-500 max-w-xl mx-auto">Simple, structured, and focused on results — not billable hours.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-navy-900 text-white font-bold text-lg flex items-center justify-center mx-auto mb-4">1</div>
+          <h3 class="font-semibold text-navy-900 mb-2">Discovery</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">We listen first. Understand your business, your team, and where the real problems live.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-navy-900 text-white font-bold text-lg flex items-center justify-center mx-auto mb-4">2</div>
+          <h3 class="font-semibold text-navy-900 mb-2">Assessment</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Deep analysis of your operations. We find the gaps, the waste, and the highest-leverage opportunities.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-navy-900 text-white font-bold text-lg flex items-center justify-center mx-auto mb-4">3</div>
+          <h3 class="font-semibold text-navy-900 mb-2">Build</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Design and implement the systems, processes, and tools. We work alongside your team, not above them.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-navy-900 text-white font-bold text-lg flex items-center justify-center mx-auto mb-4">4</div>
+          <h3 class="font-semibold text-navy-900 mb-2">Optimize</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Measure what matters, tune what isn't working, and ensure the gains stick over time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ───────────────────────────────────────────────────── -->
+  <section id="about" class="py-24 gradient-hero relative overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-teal/5 -translate-y-1/2 translate-x-1/2"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-teal mb-4">About OpShift</p>
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+            Built on the belief that operational excellence isn't just for enterprise.
+          </h2>
+          <p class="text-white/60 leading-relaxed text-lg mb-6">
+            OpShift Advisory is an independent consulting practice that works with businesses of all sizes — from lean teams to complex organizations — to identify where they're losing time and money, and build practical systems to fix it.
+          </p>
+          <p class="text-white/60 leading-relaxed text-lg mb-8">
+            We bring a hands-on approach grounded in real-world operations, technology, and organizational change. No off-the-shelf playbooks. No theory that doesn't survive contact with your business. Just practical solutions that actually get used.
+          </p>
+          <a href="#contact" class="inline-flex items-center gap-2 bg-teal text-navy-900 font-semibold px-6 py-3 rounded-lg hover:bg-teal-dark transition-colors text-sm">
+            Let's Talk
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+            <div class="text-teal font-semibold mb-2">Industry Agnostic</div>
+            <p class="text-white/60 text-sm leading-relaxed">We've worked across manufacturing, professional services, healthcare administration, retail, and technology. Operations problems look different on the surface — but the root causes rhyme.</p>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+            <div class="text-teal font-semibold mb-2">AI Without the Hype</div>
+            <p class="text-white/60 text-sm leading-relaxed">We're practitioners, not evangelists. We'll tell you where AI genuinely helps and where it's the wrong tool for the job. The goal is outcomes, not impressions.</p>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+            <div class="text-teal font-semibold mb-2">Small Team Mentality</div>
+            <p class="text-white/60 text-sm leading-relaxed">You work directly with the consultant, not a rotating cast of junior analysts. You get the senior brain on every call, every deliverable, every week.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ─────────────────────────────────────────────────── -->
+  <section id="contact" class="py-24 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <!-- Left copy -->
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-teal mb-4">Get In Touch</p>
+          <h2 class="text-4xl md:text-5xl font-bold text-navy-900 mb-6">Ready to talk?</h2>
+          <p class="text-lg text-gray-500 leading-relaxed mb-8">
+            Tell us a bit about what you're working on. No sales pitch, no commitment — just a conversation about where you are and where you want to be.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-teal/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <p class="font-medium text-navy-900 text-sm">Quick response</p>
+                <p class="text-sm text-gray-500">We respond to every inquiry within one business day.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-teal/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+              </div>
+              <div>
+                <p class="font-medium text-navy-900 text-sm">Free discovery call</p>
+                <p class="text-sm text-gray-500">30 minutes, no cost, no obligation. Just a real conversation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+          <form id="contact-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST" novalidate>
+            <div class="space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5" for="fname">First Name *</label>
+                  <input id="fname" name="first_name" type="text" required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal/40 focus:border-teal transition-colors"
+                    placeholder="Jane" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5" for="lname">Last Name *</label>
+                  <input id="lname" name="last_name" type="text" required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal/40 focus:border-teal transition-colors"
+                    placeholder="Smith" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5" for="email">Email *</label>
+                <input id="email" name="email" type="email" required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal/40 focus:border-teal transition-colors"
+                  placeholder="jane@company.com" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5" for="company">Company</label>
+                <input id="company" name="company" type="text"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal/40 focus:border-teal transition-colors"
+                  placeholder="Acme Corp" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5" for="service">I'm interested in…</label>
+                <select id="service" name="service"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal/40 focus:border-teal transition-colors bg-white">
+                  <option value="">Select a service…</option>
+                  <option>AI Strategy &amp; Adoption</option>
+                  <option>Operations Assessment</option>
+                  <option>Process Engineering</option>
+                  <option>Change Management &amp; Training</option>
+                  <option>Not sure yet — just exploring</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5" for="message">Tell us about your situation *</label>
+                <textarea id="message" name="message" rows="4" required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal/40 focus:border-teal transition-colors resize-none"
+                  placeholder="What's your biggest operational challenge right now? What are you hoping to achieve?"></textarea>
+              </div>
+              <button type="submit" id="submit-btn"
+                class="w-full bg-navy-900 text-white font-semibold py-3.5 rounded-lg hover:bg-navy-800 transition-colors text-sm flex items-center justify-center gap-2">
+                Send Message
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+              </button>
+            </div>
+          </form>
+          <div id="form-success" class="hidden text-center py-8">
+            <div class="w-12 h-12 rounded-full bg-teal/10 flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h3 class="font-semibold text-navy-900 mb-2">Message Sent</h3>
+            <p class="text-sm text-gray-500">Thanks for reaching out. We'll be in touch within one business day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────── -->
+  <footer class="bg-navy-900 border-t border-white/10 py-10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded bg-teal flex items-center justify-center text-navy-900 font-black text-xs">O</div>
+          <span class="font-bold text-white text-sm">OpShift <span class="font-light opacity-50">Advisory</span></span>
+        </div>
+        <div class="flex items-center gap-8">
+          <a href="#services" class="text-xs text-white/40 hover:text-white/70 transition-colors">Services</a>
+          <a href="#about"    class="text-xs text-white/40 hover:text-white/70 transition-colors">About</a>
+          <a href="#contact"  class="text-xs text-white/40 hover:text-white/70 transition-colors">Contact</a>
+        </div>
+        <p class="text-xs text-white/30">&copy; 2026 OpShift Advisory. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── SCRIPTS ─────────────────────────────────────────────────── -->
+  <script>
+    // Sticky nav background on scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        nav.classList.add('bg-navy-900', 'shadow-lg');
+      } else {
+        nav.classList.remove('bg-navy-900', 'shadow-lg');
+      }
+    });
+
+    // Mobile menu toggle
+    const toggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconMenu = document.getElementById('icon-menu');
+    const iconClose = document.getElementById('icon-close');
+
+    toggle.addEventListener('click', () => {
+      const open = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden', open);
+      iconMenu.classList.toggle('hidden', !open);
+      iconClose.classList.toggle('hidden', open);
+    });
+
+    function closeMobile() {
+      mobileMenu.classList.add('hidden');
+      iconMenu.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    }
+
+    // Contact form — Formspree AJAX
+    const form = document.getElementById('contact-form');
+    const successDiv = document.getElementById('form-success');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+
+        if (res.ok) {
+          form.classList.add('hidden');
+          successDiv.classList.remove('hidden');
+        } else {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Try Again';
+          alert('Something went wrong. Please try again or email us directly.');
+        }
+      } catch {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Try Again <svg class="w-4 h-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>';
+        alert('Network error. Please check your connection and try again.');
+      }
+    });
+  </script>
+
+</body>
+</html>
