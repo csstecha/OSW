@@ -369,6 +369,64 @@
     </div>
   </section>
 
+  <!-- ── EASTER EGG ───────────────────────────────────────────── -->
+  <section class="bg-[#1a1a1a] py-16 px-6 border-t border-white/5">
+    <div class="max-w-2xl mx-auto text-center space-y-8">
+
+      <!-- Fun Fact -->
+      <div class="bg-[#111] border border-white/10 rounded-2xl p-6 text-left">
+        <p class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Did You Know?</p>
+        <p class="text-white/80 text-sm leading-relaxed">
+          In <strong class="text-white">1956</strong>, the term <strong class="text-white">"Artificial Intelligence"</strong> was coined at the Dartmouth Conference — generally considered the official birth of AI as a field. Someone thought that was a great idea. The jury is still out.
+        </p>
+      </div>
+
+      <!-- Safety Counter Board -->
+      <div class="bg-[#222] border-4 border-[#f5a623] rounded-xl overflow-hidden shadow-2xl">
+        <!-- Board Header -->
+        <div class="bg-[#f5a623] px-6 py-3 flex items-center justify-center gap-3">
+          <span class="text-2xl">⚠️</span>
+          <span class="font-black text-[#1a1a1a] uppercase tracking-widest text-sm">AI Incident-Free Day Counter</span>
+          <span class="text-2xl">⚠️</span>
+        </div>
+        <!-- Counter -->
+        <div class="px-8 py-8 space-y-2">
+          <p class="text-white/40 text-xs uppercase tracking-widest text-center">Days Since AI Took Over The World</p>
+          <div class="flex items-center justify-center gap-2 my-4">
+            <div id="day-counter" class="font-black text-[#f5a623] leading-none" style="font-size: clamp(3rem, 10vw, 6rem); font-family: 'Courier New', monospace; letter-spacing: 0.1em;">
+              --,---
+            </div>
+          </div>
+          <p class="text-white/30 text-xs text-center">(and counting — fingers crossed)</p>
+          <div class="mt-4 pt-4 border-t border-white/10 flex items-center justify-center gap-6 text-xs text-white/20">
+            <span>Est. Threat Level: <span class="text-amber-400 font-semibold">Suspicious</span></span>
+            <span>•</span>
+            <span>Status: <span class="text-green-400 font-semibold">Still Human-Run</span></span>
+            <span>•</span>
+            <span>Since: <span class="text-white/40">Aug 31, 1956</span></span>
+          </div>
+        </div>
+        <!-- Board Footer -->
+        <div class="bg-[#1a1a1a] border-t border-[#f5a623]/30 px-6 py-2 text-center">
+          <p class="text-white/20 text-xs italic">Safety is everyone's responsibility. Especially the robots.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    // Easter egg day counter — days since Dartmouth Conference (Aug 31, 1956)
+    (function() {
+      const start = new Date('1956-08-31T00:00:00Z');
+      const now = new Date();
+      const days = Math.floor((now - start) / (1000 * 60 * 60 * 24));
+      const formatted = days.toLocaleString('en-US');
+      const el = document.getElementById('day-counter');
+      if (el) el.textContent = formatted;
+    })();
+  </script>
+
   <!-- ── FOOTER ─────────────────────────────────────────────────── -->
   <footer class="bg-navy-900 border-t border-white/10 py-10">
     <div class="max-w-6xl mx-auto px-6">
